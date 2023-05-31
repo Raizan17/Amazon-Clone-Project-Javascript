@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <title>Object</title>
+</head>
+<body>
+    <script>
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      }
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product); 
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      */
+
+      /*
+
+      const product2 = {
+        name: 'shirt' ,
+        ['delivery-time']: '1 day',
+
+        // nested objects (object inside object)
+          rating: {
+            stars: 4.5,
+            count: 87
+          } ,
+
+          func: function function1() {
+            console.log("function inside object");
+          }
+
+      };
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['deliver-time']);
+
+        console.log(product2.rating.count);
+        product2.func();
+
+        // the following is a method. A method is a function inside an object. console.log is a method because it log is a function inside console object. Math.random is also a method.
+        console.log (typeof console.log);
+
+        // built in methods such as JSON and Local Storage
+
+        // JSON = JavaScript Object NOtation
+
+        // JSON is a syntax, it is Javascript Object code but with simpler syntax and less features. But it is readable by all programming languages so it is more universal so it is used when sending data between computers.
+
+
+        // JavaScript Object > JSON string
+        console.log(JSON.stringify(product2));
+
+        // JSON string > JavaSCript Object
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+
+        */
+
+      // AutoBoxing: strings also have properties such as .length because in javascript strings and numbers are Automatically wrapped around with special objects like boxes.
+        console.log('hello'.length);
+        console.log('jello'.toUpperCase());
+
+      // Objects are references:
+
+      const object1 = {
+        message: 'hello'
+      };
+
+      // copy by reference
+      const object2 = object1;
+
+      object1.message = 'Good Job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good Job!'
+      };
+
+      // can not directly compare objects because here the references are being compared since object1 and 3 have different references they are shown not equal but since object 2 and 1 have same reference they are shown equal
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+     
+     const object4 = {
+      message: 'Good Job!' ,
+      price: 799
+     }
+
+//const message = object4.message
+
+//^^ shortcut for when variable and object name are the same:
+// destructuring shortcut
+const {message, price} = object4;
+console.log(price);
+
+
+
+
+      const object5 = {
+        message ,
+        //  ^^ shorthand property: same as message: message
+        
+        //method: function function1() {
+         // console.log('method');
+        //}
+
+        method() {
+          console.log('method');
+        }
+
+      };
+      console.log(object5);
+      object5.method();
+      
+
+  
+
+
+    </script>
+</body>
+</html>
