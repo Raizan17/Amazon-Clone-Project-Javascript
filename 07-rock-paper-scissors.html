@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Functions </title>
+</head>
+<body>
+  <p>
+    Rock Paper Scissors
+  </p>
+
+  <button onclick="
+      
+   pickComputerMove();
+   
+    playerMove = 'rock';
+
+   PlayGame(playerMove);
+
+  "> Rock</button>
+
+
+  <button onclick="
+
+  pickComputerMove();
+
+   playerMove = 'paper';
+
+   PlayGame(playerMove);
+  "> Paper</button>
+
+
+  <button onclick="
+    pickComputerMove();
+
+  playerMove = 'scissors';
+
+  PlayGame(playerMove);
+     
+  "> Scissors</button>
+
+
+<script>
+  let playerMove = '';
+  let result = '';
+  let computerMove = '';
+
+  function pickComputerMove() {
+    const randomNumber = Math.random();
+    if ((0 < randomNumber) && (randomNumber < 1/3)  ) {
+       computerMove = 'rock';
+    }
+      else if ((1/3 < randomNumber) && (randomNumber < 2/3) ) {
+      computerMove = 'paper';
+      }
+
+      else {
+      computerMove = 'scissors';
+      }
+
+      return computerMove;
+  }
+
+  function PlayGame(PlayerMove) {
+
+
+    if(playerMove === 'rock'){
+
+        if (computerMove === 'rock') {
+          result = 'tie';
+        }
+        else if (computerMove === 'paper') {
+          result = 'You lose';
+        }
+        else {
+          result = 'You win';
+        }
+
+        alert(`You picked rock. Computer picked ${computerMove}. ${result}`)
+
+    }
+
+    else if(playerMove === 'paper') {
+
+      
+      if (computerMove === 'rock') {
+        result = 'You win';
+      }
+      else if (computerMove === 'paper') {
+        result = 'tie';
+      }
+      else {
+        result = 'You Lose';
+      }
+
+      alert(`You picked paper. Computer picked ${computerMove}. ${result}`)
+
+
+    }
+
+    else if (playerMove === 'scissors') {
+
+      if (computerMove === 'rock') {
+          result = 'You lose';
+        }
+        else if (computerMove === 'paper') {
+          result = 'You Win';
+        }
+        else {
+          result = 'tie';
+        }
+
+        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`)
+
+
+    }
+  
+    
+
+  }
+
+
+
+</script>
+
+</body>
+
+</html>
